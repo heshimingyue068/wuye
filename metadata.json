@@ -1,0 +1,6 @@
+{
+  "name": "智慧邻里 - 智能物业服务平台 MVP",
+  "description": "高保真双端联动智能物业服务平台原型，支持业主端 H5（一键开门、物业缴费、报事报修、匿名投诉建议、员工接单）与物业管理后台 Web（工作台、工单中心、财务收费、住户审核、公告管理）实时同屏联动。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
