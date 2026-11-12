@@ -4,9 +4,6 @@ import {
   Smartphone,
   LayoutDashboard,
   RotateCcw,
-  Sparkles,
-  ShieldAlert,
-  Wrench,
   Building2,
 } from 'lucide-react';
 
@@ -15,7 +12,6 @@ export const DemoSwitcher: React.FC = () => {
     viewMode,
     setViewMode,
     resetToMockData,
-    quickDemoTrigger,
   } = useProperty();
 
   return (
@@ -62,29 +58,6 @@ export const DemoSwitcher: React.FC = () => {
 
         {/* Quick Helper Actions */}
         <div className="flex items-center gap-2 shrink-0">
-          <div className="hidden xl:flex items-center gap-1.5 text-slate-400 mr-1">
-            <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-            <span className="text-[11px]">快捷业务体验:</span>
-          </div>
-
-          <button
-            onClick={() => quickDemoTrigger('repair')}
-            className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 hover:text-white transition-colors"
-            title="一键由业主端提交一条紧急水管漏水报修工单"
-          >
-            <Wrench className="w-3 h-3 text-blue-400" />
-            <span>快速提交报修</span>
-          </button>
-
-          <button
-            onClick={() => quickDemoTrigger('complaint')}
-            className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 hover:text-white transition-colors"
-            title="一键提交一条夜间低频噪音匿名投诉（触发后台红标预警）"
-          >
-            <ShieldAlert className="w-3 h-3 text-red-400" />
-            <span>快速紧急投诉</span>
-          </button>
-
           <button
             onClick={resetToMockData}
             className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 hover:text-white transition-colors"

@@ -21,6 +21,7 @@ import { FinanceView } from './FinanceView';
 import { ResidentsView } from './ResidentsView';
 import { NoticeView } from './NoticeView';
 import { TicketItem } from '../../types';
+import { ToastContainer } from '../common/Toast';
 
 export const DesktopLayout: React.FC = () => {
   const { tickets, residentAudits, bills } = useProperty();
@@ -50,6 +51,8 @@ export const DesktopLayout: React.FC = () => {
 
   return (
     <div className="flex h-full min-h-[750px] bg-slate-100/90 text-slate-800 text-xs overflow-hidden">
+      <ToastContainer variant="desktop" />
+
       {/* Left Sidebar */}
       <aside className="w-60 bg-slate-900 text-slate-300 flex flex-col shrink-0 border-r border-slate-800">
         {/* Sidebar Brand Header */}

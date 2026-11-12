@@ -343,7 +343,7 @@ export const RecordsTab: React.FC = () => {
 
       {/* Unsatisfied Feedback Modal */}
       {unsatisfiedModalTicket && (
-        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/60 backdrop-blur-xs p-4">
+        <div className="absolute inset-0 z-50 flex items-end sm:items-center justify-center bg-black/60 backdrop-blur-xs p-4">
           <div className="w-full max-w-sm bg-white rounded-2xl p-4 shadow-2xl flex flex-col space-y-3 animate-in fade-in">
             <div className="flex items-center justify-between pb-2 border-b border-slate-100">
               <h4 className="font-bold text-red-600 text-sm flex items-center gap-1.5">

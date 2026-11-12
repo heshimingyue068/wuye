@@ -17,6 +17,7 @@ import {
   ArrowRight,
   Layers,
   QrCode,
+  Sun,
 } from 'lucide-react';
 import { PaymentModal } from './modals/PaymentModal';
 import { RepairModal } from './modals/RepairModal';
@@ -127,31 +128,22 @@ export const HomeTab: React.FC<HomeTabProps> = ({ onNavigateTab }) => {
             )}
           </div>
 
-          {/* Top Status */}
-          <div className="text-[11px] text-blue-100/90 font-medium flex items-center gap-1.5 bg-white/10 px-2.5 py-1 rounded-full border border-white/15">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-            <span>已认证业主</span>
+          {/* Weather Chip */}
+          <div className="flex items-center gap-1.5 text-[11px] text-blue-100/90 bg-white/10 px-2.5 py-1 rounded-full border border-white/15">
+            <Sun className="w-3.5 h-3.5 text-amber-300" />
+            <span>晴 24℃</span>
           </div>
         </div>
 
         {/* Resident Greeting */}
-        <div className="mt-3.5 flex items-center justify-between">
-          <div>
-            <div className="text-lg font-bold text-white flex items-center gap-2">
-              <span>您好，{currentProperty.residentName}</span>
-              <span className="text-[10px] bg-emerald-400/30 text-emerald-100 border border-emerald-300/40 px-2 py-0.5 rounded-full font-medium">
-                已认证业主
-              </span>
-            </div>
-            <p className="text-[11px] text-blue-100/90 mt-0.5">今天晴 24℃ · 幸福里花园物业管家竭诚守护</p>
+        <div className="mt-3.5">
+          <div className="text-lg font-bold text-white flex items-center gap-2">
+            <span>您好，{currentProperty.residentName}</span>
+            <span className="text-[10px] bg-emerald-400/30 text-emerald-100 border border-emerald-300/40 px-2 py-0.5 rounded-full font-medium">
+              已认证业主
+            </span>
           </div>
-          <button
-            onClick={() => onNavigateTab('access')}
-            className="w-10 h-10 rounded-2xl bg-white/20 hover:bg-white/30 backdrop-blur-xs flex items-center justify-center text-white transition-transform active:scale-95"
-            title="快捷开门"
-          >
-            <KeyRound className="w-5 h-5 text-amber-300" />
-          </button>
+          <p className="text-[11px] text-blue-100/90 mt-0.5">幸福里花园物业管家竭诚守护</p>
         </div>
       </div>
 

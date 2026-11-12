@@ -15,6 +15,7 @@ import { AccessTab } from './AccessTab';
 import { RecordsTab } from './RecordsTab';
 import { ProfileTab } from './ProfileTab';
 import { StaffWorkspace } from './StaffWorkspace';
+import { ToastContainer } from '../common/Toast';
 
 export const MobileSimulator: React.FC = () => {
   const { roleMode, setRoleMode, currentProperty } = useProperty();
@@ -120,6 +121,9 @@ export const MobileSimulator: React.FC = () => {
 
           {/* iOS Bottom Indicator Bar */}
           <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-32 h-1 bg-slate-400/50 rounded-full pointer-events-none z-40" />
+
+          {/* In-app Toast Notifications */}
+          <ToastContainer variant="mobile" />
         </div>
       </div>
     </div>
